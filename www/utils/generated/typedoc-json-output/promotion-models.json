@@ -1,0 +1,4355 @@
+{
+	"id": 13678,
+	"name": "promotion-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"comment": {
+		"summary": [
+			{
+				"text": "## Relations Overview\n\n",
+				"kind": "text"
+			},
+			{
+				"text": "```mermaid\nerDiagram\n\tApplicationMethod }|--|{ PromotionRule : target_rules\n\tCampaign ||--|| CampaignBudget : budget\n\tCampaign ||--|| Promotion : promotions\n\tPromotion ||--|| ApplicationMethod : application_method\n\tPromotion }|--|{ PromotionRule : rules\n\tPromotionRule ||--|| PromotionRuleValue : values\n\n```",
+				"kind": "code"
+			}
+		]
+	},
+	"children": [
+		{
+			"id": 13679,
+			"name": "ApplicationMethod",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "application-method.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 13680,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 13681,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the application method."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13682,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The value of the application method"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13683,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The currency code of the application method.\n\n@example usd"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 11,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13684,
+											"name": "max_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The max quantity allowed in the cart for the associated promotion to be applied."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 12,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13685,
+											"name": "apply_to_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The quantity that results from matching the `buyget` promotion's condition. For example, if the promotion is a \"Buy 2 shirts get 1 free\", the value of this attribute is `1`."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13686,
+											"name": "buy_rules_min_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The minimum quantity required for a `buyget` promotion to be applied. For example, if the promotion is a \"Buy 2 shirts get 1 free\", the value of this attribute is `2`."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13687,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The application method's type. If it's `fixed`, the promotion discounts a fixed amount. If it's `percentage`, the promotion discounts a percentage."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodType"
+															},
+															"name": "ApplicationMethodType",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13688,
+											"name": "target_type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Which item does the promotion apply to. `items` mean the promotion applies to the cart's items; `shipping_methods` means the promotion applies to the cart's shipping methods; `order` means the promotion applies on the entire order."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 18,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L18"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodTargetType"
+															},
+															"name": "ApplicationMethodTargetType",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13689,
+											"name": "allocation",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "How is the promotion amount discounted. `each` means the discounted amount is applied on each applicable item; `across` means the discounted amount is split accross the applicable items."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 21,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L21"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodAllocation"
+															},
+															"name": "ApplicationMethodAllocation",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13690,
+											"name": "promotion",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotion."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 25,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L25"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13854,
+														"name": "Promotion"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13712,
+											"name": "target_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated target rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 28,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L28"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13972,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13735,
+											"name": "buy_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated buy rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 32,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L32"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13972,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												13681,
+												13682,
+												13683,
+												13684,
+												13685,
+												13686,
+												13687,
+												13688,
+												13689,
+												13690,
+												13712,
+												13735
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "application-method.ts",
+											"line": 8,
+											"character": 4,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L8"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 13758,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 13759,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "application-method.ts",
+											"line": 7,
+											"character": 6,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "ApplicationMethod"
+									},
+									"defaultValue": "\"ApplicationMethod\""
+								},
+								{
+									"id": 13760,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "application-method.ts",
+											"line": 7,
+											"character": 33,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_application_method"
+									},
+									"defaultValue": "\"promotion_application_method\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										13759,
+										13760
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "application-method.ts",
+									"line": 7,
+									"character": 4,
+									"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/application-method.ts#L7"
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 13823,
+			"name": "CampaignBudget",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "campaign-budget.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 13824,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 13825,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the campaign budget."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13826,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The type of the campaign budget"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "CampaignBudgetType"
+															},
+															"name": "CampaignBudgetType",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13827,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The currency code of the campaign budget.\n\n@example usd"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13828,
+											"name": "limit",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The limit of the campaign budget"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13829,
+											"name": "used",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "How much of the budget has been used. if the `limit` is `spend`, this property holds the total amount discounted so far. if the `limit` is `usage`, it holds the number of times the campaign's promotions have been used so far."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13830,
+											"name": "campaign",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated campaign."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 14,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13761,
+														"name": "Campaign"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												13825,
+												13826,
+												13827,
+												13828,
+												13829,
+												13830
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "campaign-budget.ts",
+											"line": 6,
+											"character": 2,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L6"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 13851,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 13852,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget.ts",
+											"line": 5,
+											"character": 4,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "CampaignBudget"
+									},
+									"defaultValue": "\"CampaignBudget\""
+								},
+								{
+									"id": 13853,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget.ts",
+											"line": 5,
+											"character": 28,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_campaign_budget"
+									},
+									"defaultValue": "\"promotion_campaign_budget\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										13852,
+										13853
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "campaign-budget.ts",
+									"line": 5,
+									"character": 2,
+									"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign-budget.ts#L5"
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 13761,
+			"name": "Campaign",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "campaign.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 13762,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 13763,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the campaign."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13764,
+											"name": "name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the campaign"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13765,
+											"name": "description",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The description of the campaign"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 11,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13766,
+											"name": "campaign_identifier",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The campaign's identifier, such as a Google Tag ID."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 12,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13767,
+											"name": "starts_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The date that the campaign starts."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13768,
+											"name": "ends_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The date that the campaign ends."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13769,
+											"name": "budget",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated budget."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/has-one.ts",
+													"qualifiedName": "HasOne"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13823,
+														"name": "CampaignBudget"
+													}
+												],
+												"name": "HasOne",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13798,
+											"name": "promotions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotions."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 20,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L20"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13854,
+														"name": "Promotion"
+													}
+												],
+												"name": "HasMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												13763,
+												13764,
+												13765,
+												13766,
+												13767,
+												13768,
+												13769,
+												13798
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "campaign.ts",
+											"line": 8,
+											"character": 4,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L8"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 13820,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 13821,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign.ts",
+											"line": 7,
+											"character": 6,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "Campaign"
+									},
+									"defaultValue": "\"Campaign\""
+								},
+								{
+									"id": 13822,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign.ts",
+											"line": 7,
+											"character": 24,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_campaign"
+									},
+									"defaultValue": "\"promotion_campaign\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										13821,
+										13822
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "campaign.ts",
+									"line": 7,
+									"character": 4,
+									"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/campaign.ts#L7"
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 14065,
+			"name": "PromotionRuleValue",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion-rule-value.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 14066,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 14067,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion rule value."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 14068,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The value of the promotion rule."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 14069,
+											"name": "promotion_rule",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotion rule."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13972,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												14067,
+												14068,
+												14069
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "promotion-rule-value.ts",
+											"line": 6,
+											"character": 2,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L6"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 14092,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 14093,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule-value.ts",
+											"line": 5,
+											"character": 4,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "PromotionRuleValue"
+									},
+									"defaultValue": "\"PromotionRuleValue\""
+								},
+								{
+									"id": 14094,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule-value.ts",
+											"line": 5,
+											"character": 32,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_rule_value"
+									},
+									"defaultValue": "\"promotion_rule_value\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										14093,
+										14094
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "promotion-rule-value.ts",
+									"line": 5,
+									"character": 2,
+									"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule-value.ts#L5"
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 13972,
+			"name": "PromotionRule",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion-rule.ts",
+					"line": 6,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 13973,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 13974,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion rule."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13975,
+											"name": "description",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The description of the promotion rule"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13976,
+											"name": "attribute",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The attribute of the promotion rule.\n\n@example customer_group_id"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13977,
+											"name": "operator",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The operator of the promotion rule.\n\n@example in"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 16,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "PromotionRuleOperator"
+															},
+															"name": "PromotionRuleOperator",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13978,
+											"name": "values",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated values."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 19,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 14065,
+														"name": "PromotionRuleValue"
+													}
+												],
+												"name": "HasMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13990,
+											"name": "promotions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotions."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 22,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L22"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13854,
+														"name": "Promotion"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 14012,
+											"name": "method_target_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated method target rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 25,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L25"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13679,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 14037,
+											"name": "method_buy_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated method buy rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 28,
+													"character": 6,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L28"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13679,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												13974,
+												13975,
+												13976,
+												13977,
+												13978,
+												13990,
+												14012,
+												14037
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "promotion-rule.ts",
+											"line": 12,
+											"character": 4,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L12"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 14062,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 14063,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule.ts",
+											"line": 9,
+											"character": 6,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L9"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "PromotionRule"
+									},
+									"defaultValue": "\"PromotionRule\""
+								},
+								{
+									"id": 14064,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule.ts",
+											"line": 10,
+											"character": 6,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L10"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_rule"
+									},
+									"defaultValue": "\"promotion_rule\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										14063,
+										14064
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "promotion-rule.ts",
+									"line": 8,
+									"character": 4,
+									"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion-rule.ts#L8"
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 13854,
+			"name": "Promotion",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion.ts",
+					"line": 6,
+					"character": 6,
+					"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../../../packages/core/utils/src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 13855,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 13856,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../../../packages/core/utils/src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@medusajs/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13857,
+											"name": "code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The code of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13858,
+											"name": "is_automatic",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the promotion is applied automatic. If disabled, the customer must enter the code during checkout."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13859,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The type of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "PromotionType"
+															},
+															"name": "PromotionType",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13860,
+											"name": "status",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The status of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../../../../packages/core/utils/src/promotion/index.ts",
+																"qualifiedName": "PromotionStatus"
+															},
+															"name": "PromotionStatus",
+															"package": "@medusajs/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13861,
+											"name": "campaign",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated campaign."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 16,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13761,
+														"name": "Campaign"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13900,
+											"name": "application_method",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated application method."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 21,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L21"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/has-one.ts",
+													"qualifiedName": "HasOne"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13679,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "HasOne",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 13949,
+											"name": "rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 26,
+													"character": 4,
+													"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L26"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../../../packages/core/utils/src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 13972,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@medusajs/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												13856,
+												13857,
+												13858,
+												13859,
+												13860,
+												13861,
+												13900,
+												13949
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "promotion.ts",
+											"line": 7,
+											"character": 23,
+											"url": "https://github.com/medusajs/medusa/blob/4936315b2dc777fbaaf2869b16bf48602fc7e69b/packages/modules/promotion/src/models/promotion.ts#L7"
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@medusajs/utils"
+					},
+					{
+						"type": "literal",
+						"value": "Promotion"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@medusajs/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				13679,
+				13823,
+				13761,
+				14065,
+				13972,
+				13854
+			]
+		}
+	],
+	"packageName": "@medusajs/promotion",
+	"symbolIdMap": {
+		"13678": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"13679": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "ApplicationMethod"
+		},
+		"13680": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13681": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13682": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"13683": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13684": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"13685": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"13686": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"13687": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13688": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"13689": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"13690": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"13691": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13692": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13693": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"13694": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13695": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"13696": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"13697": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13698": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"13699": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13700": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13701": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13702": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13703": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13704": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"13705": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13706": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13707": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13708": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13709": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"13710": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13711": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13712": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"13713": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13714": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13715": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13716": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13717": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13718": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"13719": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"13720": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"13721": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13722": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13723": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13724": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13725": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13726": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"13727": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13728": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13729": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"13730": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13731": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13732": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13733": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13734": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13735": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"13736": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13737": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13738": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13739": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13740": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13741": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"13742": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"13743": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"13744": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13745": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13746": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13747": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13748": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13749": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"13750": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13751": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13752": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"13753": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13754": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13755": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13756": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13757": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13758": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13759": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13760": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13761": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "Campaign"
+		},
+		"13762": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13763": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13764": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13765": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13766": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"13767": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"13768": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"13769": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"13770": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13771": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13772": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13773": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13774": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13775": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13776": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"13777": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"13778": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13779": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13780": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13781": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13782": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13783": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13784": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13785": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13786": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13787": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13788": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13789": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13790": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"13791": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"13792": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13793": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13794": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13795": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13796": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13797": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13798": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13799": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13800": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13801": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"13802": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13803": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"13804": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"13805": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13806": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"13807": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13808": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13809": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13810": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13811": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13812": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"13813": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13814": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13815": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13816": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13817": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"13818": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13819": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13820": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13821": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13822": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13823": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "CampaignBudget"
+		},
+		"13824": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13825": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13826": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13827": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13828": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"13829": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"13830": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13831": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13832": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"13833": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13834": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13835": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13836": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13837": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"13838": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"13839": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"13840": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"13841": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13842": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13843": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13844": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13845": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13846": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13847": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13848": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13849": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13850": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13851": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"13852": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13853": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13854": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "Promotion"
+		},
+		"13855": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"13856": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13857": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"13858": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"13859": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13860": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"13861": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"13862": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13863": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13864": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13865": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13866": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13867": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13868": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"13869": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"13870": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"13871": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"13872": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13873": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13874": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13875": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13876": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13877": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13878": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13879": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13880": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13881": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13882": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13883": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"13884": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13885": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13886": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13887": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13888": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"13889": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"13890": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"13891": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"13892": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13893": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"13894": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13895": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13896": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"13897": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"13898": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13899": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13900": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"13901": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13902": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13903": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13904": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13905": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"13906": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13907": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"13908": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"13909": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"13910": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13911": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"13912": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"13913": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"13914": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13915": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13916": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"13917": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13918": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13919": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"13920": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13921": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13922": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13923": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13924": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13925": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13926": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13927": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13928": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13929": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"13930": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"13931": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"13932": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"13933": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"13934": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13935": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"13936": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"13937": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"13938": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13939": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13940": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"13941": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13942": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13943": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"13944": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13945": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"13946": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"13947": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13948": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13949": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"13950": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13951": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"13952": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13953": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13954": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13955": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"13956": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"13957": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"13958": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13959": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13960": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13961": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13962": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13963": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"13964": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13965": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13966": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"13967": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13968": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13969": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13970": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13971": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13972": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "PromotionRule"
+		},
+		"13973": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"13974": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13975": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"13976": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"13977": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"13978": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"13979": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13980": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13981": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"13982": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13983": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.value"
+		},
+		"13984": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.promotion_rule"
+		},
+		"13985": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"13986": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"13987": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"13988": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.name"
+		},
+		"13989": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"13990": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"13991": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13992": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"13993": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"13994": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"13995": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"13996": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"13997": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"13998": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"13999": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"14000": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"14001": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"14002": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"14003": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"14004": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"14005": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14006": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14007": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14008": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14009": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"14010": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14011": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"14012": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"14013": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14014": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14015": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"14016": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"14017": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"14018": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"14019": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"14020": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"14021": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"14022": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"14023": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"14024": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"14025": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"14026": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14027": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14028": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"14029": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14030": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14031": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"14032": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14033": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14034": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"14035": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"14036": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"14037": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"14038": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14039": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14040": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"14041": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"14042": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"14043": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"14044": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"14045": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"14046": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"14047": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"14048": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"14049": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"14050": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"14051": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14052": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14053": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"14054": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14055": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14056": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"14057": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14058": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"14059": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"14060": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"14061": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"14062": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"14063": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"14064": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"14065": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "PromotionRuleValue"
+		},
+		"14066": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"14067": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.id"
+		},
+		"14068": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.value"
+		},
+		"14069": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.promotion_rule"
+		},
+		"14070": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"14071": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"14072": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"14073": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"14074": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"14075": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"14076": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"14077": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"14078": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14079": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14080": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"14081": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14082": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14083": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"14084": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14085": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14086": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"14087": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14088": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"14089": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"14090": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"14091": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"14092": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"14093": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.name"
+		},
+		"14094": {
+			"sourceFileName": "../../../../packages/modules/promotion/src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.tableName"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/promotion/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 13678
+		}
+	}
+}
